@@ -1,14 +1,13 @@
 /* ═══════════════════════════════════════
-   WESTMIRE WIRED — JAVASCRIPT
-   Hamburger menu + nav highlight
+   WESTMIRE WIRED — JAVASCRIPT v6
 ═══════════════════════════════════════ */
- 
+
 document.addEventListener('DOMContentLoaded', function () {
- 
+
   /* ── Hamburger menu toggle ── */
   const hamburger = document.getElementById('hamburger');
   const drawer    = document.getElementById('nav-drawer');
- 
+
   if (hamburger && drawer) {
     hamburger.addEventListener('click', function () {
       const isOpen = drawer.classList.toggle('open');
@@ -30,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
- 
+
   /* ── Active nav highlight on scroll ── */
   const sections = document.querySelectorAll('section[id]');
   const navLinks  = document.querySelectorAll('.nav-links a:not(.nav-cta), .nav-drawer a:not(.nav-cta)');
@@ -46,5 +45,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.3 });
   sections.forEach(function (s) { highlightObserver.observe(s); });
- 
+
 });
